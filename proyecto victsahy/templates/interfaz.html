@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registro de clientes</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+<body>
+    <h2>Registrar clientes</h2>
+    <form action="/guardar_cliente" method ="post">
+        <label> nombre</label> <br>
+        <input type="text" name="nombre" required><br><br>
+        <label> telefono</label><br>
+        <input type="text" name="telefono"><br><br>
+        <label>Correo:</label><br>
+        <input type="email" name="correo"><br><br>
+
+        <label>Dirección:</label><br>
+        <input type="text" name="direccion"><br><br>
+
+        <button type="submit">Guardar Cliente</button>
+
+    </form>
+    <br>
+    <a href="/consultar_cliente">
+    <button type="button">Ver Clientes Registrados</button>
+</a>
+</body>
+</html>
