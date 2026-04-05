@@ -2,5 +2,5 @@
 
 Proyecto académico creado para la gestión de inventarios y facturación utilizando Jira y GitHub.
 
-Autor: Daniela
+Autor: Duvan
 Universidad: UNIMINUTO
