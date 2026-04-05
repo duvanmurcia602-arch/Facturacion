@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Pedidos</h2>
+
+<form action="/consultar_pedido" method="get">
+    <label>Documento del cliente</label>
+    <input type="text" name="documento">
+    <button type="submit">Buscar Pedido</button>
+</form>
+
+{% endblock %}

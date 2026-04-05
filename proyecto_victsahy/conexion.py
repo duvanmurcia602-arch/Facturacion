@@ -12,7 +12,7 @@ def conectar():
     )
 @app.route('/')
 def inicio():
-    return render_template('base.html')
+    return render_template('index.html')
 
 
 @app.route('/inventario')
