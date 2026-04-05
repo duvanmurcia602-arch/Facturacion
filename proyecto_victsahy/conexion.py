@@ -8,15 +8,13 @@ def conectar():
         host="localhost",
         user="root",
         password="",
-        database="victsahy"
+        database="registro"
     )
 
-# Ruta para mostrar el formulario
 @app.route('/')
 def formulario():
-    return render_template('interfaz.html')  # Flask busca en templates/interfaz.html
+    return render_template('interfaz.html')
 
-# Ruta para recibir los datos del formulario
 @app.route('/guardar_cliente', methods=['POST'])
 def guardar_cliente():
     nombre = request.form['nombre']
@@ -34,7 +32,7 @@ def guardar_cliente():
     cursor.close()
     conexion.close()
 
-    return redirect('/')  # vuelve al formulario
+    return redirect('/')  
 @app.route('/consultar_cliente')
 def consultar_cliente():
     conexion = conectar()
