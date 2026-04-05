@@ -10,8 +10,24 @@ def conectar():
         password="",
         database="registro"
     )
-
 @app.route('/')
+def inicio():
+    return render_template('base.html')
+
+
+@app.route('/inventario')
+def inventario():
+    return render_template('inventario.html')
+
+@app.route('/pedidos')
+def pedidos():
+    return render_template('pedidos.html')
+
+@app.route('/catalogo')
+def catalogo():
+    return render_template('catalogo.html')
+
+@app.route('/clientes')
 def formulario():
     return render_template('interfaz.html')
 
@@ -46,6 +62,7 @@ def consultar_cliente():
     conexion.close()
 
     return render_template('consultar_cliente.html', clientes=clientes)
+
 
 if __name__ == '__main__':
     app.run(debug=True)

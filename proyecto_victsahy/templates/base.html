@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Sistema{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+<body>
+    <nav>
+    <h1>Sistema de Gestión</h1>
+    <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/clientes">Clientes</a></li>
+        <li><a href="/inventario">Inventario</a></li>
+        <li><a href="/pedidos">Pedidos</a></li>
+        <li><a href="/catalogo">catálogo</a></li>
+    </ul>
+    </nav>
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+
+    </div>
+
+</body>
+</html>

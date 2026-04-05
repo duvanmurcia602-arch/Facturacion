@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clientes</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block content %}
   <h2>Clientes Registrados</h2>
 
 <table border="1">
@@ -31,5 +26,4 @@
 
 <br>
 <a href="/"><button type="button">Volver al Formulario</button></a>
-</body>
-</html>
+{% block content %}
